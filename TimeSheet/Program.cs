@@ -18,6 +18,7 @@ namespace TimeSheet
 
         static void GetCompletedWork()
         {
+
             var startWeek = DateTime.Now.StartOfWeek(DayOfWeek.Monday);
             var endWeek = startWeek.AddDays(7).AddSeconds(-1);
 
