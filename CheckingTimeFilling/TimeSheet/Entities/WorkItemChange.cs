@@ -3,9 +3,15 @@ using System;
 
 namespace CheckingTimeFilling.TimeSheet.Entities
 {
+	[Obsolete("Revision and Field are obsolete classes")]
 	public class WorkItemChange<T>
 	{
 		public int WorkItemId { get; set; }
+
+		/// <summary>
+		/// Основное поле данной задачи. Содержит в себе "слепок" состояния задачи на момент времени
+		/// Содержит информацию о всех полях связанных с задачей.
+		/// </summary>
 		public Revision Revision { get; set; }
 		public DateTime DateOfChange { get; set; }
 		public string UserName { get; set; }
