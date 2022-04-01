@@ -95,7 +95,7 @@ namespace CheckingTFSTimeUtilit
                 {
                     mainCheckingThread = new Thread(() => StartWork());
                     mainCheckingThread.Start();
-                    HideWindow();
+                    //HideWindow();
                     GetWarning(statusConst, "Программа запущена");
                 }
             }
@@ -111,7 +111,7 @@ namespace CheckingTFSTimeUtilit
         {
             this.WindowState = FormWindowState.Minimized;
             ShowIcon = true;
-            this.ShowInTaskbar = true;
+            this.ShowInTaskbar = false;
         }
 
         private void StartWork()
